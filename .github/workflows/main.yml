@@ -1,9 +1,9 @@
 name: A workflow for my Hello word file
 on: push
-
-defaults:
-  run:
-    working-directory: action-a
+#
+#defaults:
+#  run:
+#    working-directory: action-a
 
 jobs:
   build:
@@ -20,3 +20,4 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           usedocker: true
+          appdir: action-a
